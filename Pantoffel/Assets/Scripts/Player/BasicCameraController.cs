@@ -18,8 +18,8 @@ public class BasicCameraController : MonoBehaviour {
         var mouseDirection = new Vector2 (Input.GetAxisRaw ("Mouse X"), Input.GetAxisRaw ("Mouse Y"));
 
         mouseDirection = Vector2.Scale (mouseDirection, new Vector2 (mouseSensitivity * mouseSmoothing, mouseSensitivity * mouseSmoothing));
-       // mouseSmoothV.x = Mathf.Lerp(mouseSmoothV.x, mouseDirection.x, 1f / mouseSmoothing);
-       // mouseSmoothV.y = Mathf.Lerp(mouseSmoothV.y, mouseDirection.y, 1f / mouseSmoothing);
+        mouseSmoothV.x = Mathf.Lerp(mouseSmoothV.x, mouseDirection.x, 1f / mouseSmoothing);
+        mouseSmoothV.y = Mathf.Lerp(mouseSmoothV.y, mouseDirection.y, 1f / mouseSmoothing);
         mouseLook += mouseSmoothV;
 
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y , Vector3.right);
