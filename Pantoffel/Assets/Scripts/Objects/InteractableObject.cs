@@ -23,7 +23,7 @@ public class InteractableObject : MonoBehaviour {
         item.GetComponent<Rigidbody> ().isKinematic = true;
         item.GetComponent<Collider> ().enabled = false;
         item.transform.position = guide.transform.position;
-        item.transform.rotation = guide.transform.rotation;
+        //item.transform.rotation = guide.transform.rotation;
         item.transform.parent = tempParent.transform;
 
     }
