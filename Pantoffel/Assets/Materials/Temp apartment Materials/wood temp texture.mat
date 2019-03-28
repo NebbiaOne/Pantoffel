@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mug_Final
+  m_Name: wood temp texture
   m_Shader: {fileID: 4800000, guid: cc47fd74b4cfee14b82cfcf7d172b322, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -227,7 +227,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_3479441A: {r: 0, g: 0, b: 0, a: 0}
-    - Color_B1976657: {r: 0.5528213, g: 0.9485161, b: 0.9528302, a: 0}
+    - Color_B1976657: {r: 0.4433962, g: 0.35685405, b: 0.25307047, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
