@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DiningChair
+  m_Name: DustbinSubway
   m_Shader: {fileID: 4800000, guid: cc47fd74b4cfee14b82cfcf7d172b322, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -22,11 +22,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_4070B8B4:
-        m_Texture: {fileID: 2800000, guid: 943961c6e2724404bbd0e8f70a0b1ada, type: 3}
+        m_Texture: {fileID: 2800000, guid: 517cbcba4e2b2334fbbe3823900330eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_AA15C69:
-        m_Texture: {fileID: 2800000, guid: 04b4bd6d428f3b646b9356f9763e47fa, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1c9d37575eb5b1544a52b2779c09a0ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -226,7 +226,7 @@ Material:
     - _ZTestModeDistortion: 8
     - _ZWrite: 1
     m_Colors:
-    - Color_3479441A: {r: 0, g: 0, b: 0, a: 0}
+    - Color_3479441A: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0}
     - Color_B1976657: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
