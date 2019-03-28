@@ -3,20 +3,12 @@ guid: dc2990ae424e72243909bfdb965317a9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cylinder
-    100004: //RootNode
-    100006: Light
-    400000: Camera
-    400002: Cylinder
-    400004: //RootNode
-    400006: Light
-    2000000: Camera
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: Cylinder
-    3300000: Cylinder
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Cylinder
-    10800000: Light
   externalObjects: {}
   materials:
     importMaterials: 1
