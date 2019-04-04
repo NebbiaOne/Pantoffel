@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void Update() 
+    void FixedUpdate() 
     {
         //calculate movement velocity as 3d vector
 
