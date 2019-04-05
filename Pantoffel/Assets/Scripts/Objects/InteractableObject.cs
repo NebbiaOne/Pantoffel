@@ -12,12 +12,18 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField] bool isHolding = false;
     public GameObject item;
     public GameObject tempParent;
+    public Transform tempParentChild;
     public GameObject currentParent;
+
+    [SerializeField] Vector3 initOffset;
     //public Transform guide;
 
     // Start is called before the first frame update
     void Start () {
         item.GetComponent<Rigidbody> ().useGravity = true;
+
+        tempParentChild = tempParent.transform.GetChild(0);
+
         if (item.transform.parent != null)
         {
         currentParent = item.transform.parent.gameObject;
@@ -29,7 +35,7 @@ public class InteractableObject : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void FixedUpdate () {
 
         distanceFromPickup = Vector3.Distance(item.transform.position, tempParent.transform.position);
         if (distanceFromPickup >= 1f)
@@ -40,8 +46,11 @@ public class InteractableObject : MonoBehaviour {
         if (isHolding == true) {
             item.GetComponent<Rigidbody>().velocity = Vector3.zero;
             item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            item.transform.SetParent (tempParent.transform);
-            //item.transform.position = tempParent.transform.position;
+            // item.transform.SetParent (tempParent.transform);
+            item.GetComponent<Rigidbody>().position = tempParentChild.position;
+            item.GetComponent<Rigidbody>().rotation = tempParentChild.rotation;
+
+            Debug.DrawLine(tempParent.transform.position, tempParent.transform.position + initOffset);
 
             if (Input.GetMouseButtonDown (1)) {
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
@@ -72,6 +81,19 @@ public class InteractableObject : MonoBehaviour {
             isHolding = true;
             item.GetComponent<Rigidbody> ().useGravity = false;
             item.GetComponent<Rigidbody> ().detectCollisions = true;
+
+            tempParentChild.position = item.transform.position;
+            tempParentChild.rotation = item.transform.rotation;
+
+            // initOffset = item.transform.position - tempParent.transform.position;
+            // initOffset.z = 0;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100)){
+                Debug.Log("Hit; " + hit.transform.name);
+                initOffset = (item.transform.position -hit.point) - (tempParent.transform.position - hit.point);
+            }
             
         }
 
@@ -80,6 +102,13 @@ public class InteractableObject : MonoBehaviour {
     void OnMouseUp () {
         isHolding = false;
 
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(item.transform.position, 0.1f);
+        Gizmos.DrawLine(item.transform.position, tempParent.transform.position);
+        Gizmos.DrawSphere(tempParent.transform.position, 0.1f);
     }
 
     // Old system for picking stuff up
