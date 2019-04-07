@@ -57,21 +57,21 @@ public class InteractableObject : MonoBehaviour {
                 Debug.Log("Throw clicked");
                 isHolding = false;
             }
-        } else {
+         } //else {
         
-            Debug.Log ("THIS IS HAPPENING");
-            objectPos = item.transform.position;
-            // item.transform.SetParent (null);
-            item.GetComponent<Rigidbody> ().useGravity = true;
-            item.transform.position = objectPos;
-            if (currentParent != null)
-            {
-                item.transform.SetParent(currentParent.transform);            
-            }else
-            {
-                item.transform.SetParent(null);
-            }
-        }
+        //     Debug.Log ("THIS IS HAPPENING");
+        //     objectPos = item.transform.position;
+        //     // item.transform.SetParent (null);
+        //     item.GetComponent<Rigidbody> ().useGravity = true;
+        //     item.transform.position = objectPos;
+        //     if (currentParent != null)
+        //     {
+        //         item.transform.SetParent(currentParent.transform);            
+        //     }else
+        //     {
+        //         item.transform.SetParent(null);
+        //     }
+        // }
 
     }
 
@@ -101,6 +101,18 @@ public class InteractableObject : MonoBehaviour {
 
     void OnMouseUp () {
         isHolding = false;
+            Debug.Log ("THIS IS HAPPENING");
+            objectPos = item.transform.position;
+            // item.transform.SetParent (null);
+            item.GetComponent<Rigidbody> ().useGravity = true;
+            item.transform.position = objectPos;
+            if (currentParent != null)
+            {
+                item.transform.SetParent(currentParent.transform);            
+            }else
+            {
+                item.transform.SetParent(null);
+            }
 
     }
 
