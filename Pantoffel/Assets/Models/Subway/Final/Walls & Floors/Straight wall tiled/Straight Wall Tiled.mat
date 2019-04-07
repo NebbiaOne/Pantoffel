@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Diagonal stair wall
+  m_Name: Straight Wall Tiled
   m_Shader: {fileID: 4800000, guid: cc47fd74b4cfee14b82cfcf7d172b322, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -22,11 +22,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_4070B8B4:
-        m_Texture: {fileID: 2800000, guid: 3d06e763cf992f546a7ced73b480c9f6, type: 3}
+        m_Texture: {fileID: 2800000, guid: f4a5b8d72826283498c848e736635e84, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_AA15C69:
-        m_Texture: {fileID: 2800000, guid: c7e79862f4bdebe469f793aef03be65a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4f97d357e98f49f44b2bb188f5fa3ae0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
