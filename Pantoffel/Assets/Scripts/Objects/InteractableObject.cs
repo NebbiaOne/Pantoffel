@@ -50,7 +50,7 @@ public class InteractableObject : MonoBehaviour {
             item.GetComponent<Rigidbody>().position = tempParentChild.position;
             item.GetComponent<Rigidbody>().rotation = tempParentChild.rotation;
 
-            Debug.DrawLine(tempParent.transform.position, tempParent.transform.position + initOffset);
+            //Debug.DrawLine(tempParent.transform.position, tempParent.transform.position + initOffset);
 
             if (Input.GetMouseButtonDown (1)) {
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
@@ -116,12 +116,12 @@ public class InteractableObject : MonoBehaviour {
 
     }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(item.transform.position, 0.1f);
-        Gizmos.DrawLine(item.transform.position, tempParent.transform.position);
-        Gizmos.DrawSphere(tempParent.transform.position, 0.1f);
-    }
+    // void OnDrawGizmos()
+    // {
+    //     Gizmos.DrawSphere(item.transform.position, 0.1f);
+    //     Gizmos.DrawLine(item.transform.position, tempParent.transform.position);
+    //     Gizmos.DrawSphere(tempParent.transform.position, 0.1f);
+    // }
 
     // Old system for picking stuff up
 
