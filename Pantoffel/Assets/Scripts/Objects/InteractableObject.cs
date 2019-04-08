@@ -56,6 +56,7 @@ public class InteractableObject : MonoBehaviour {
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
                 Debug.Log("Throw clicked");
                 isHolding = false;
+                OnMouseUp();
             }
          } //else {
         
