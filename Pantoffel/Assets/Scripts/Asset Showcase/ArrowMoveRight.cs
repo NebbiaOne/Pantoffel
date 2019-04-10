@@ -11,11 +11,17 @@ public class ArrowMoveRight : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if (Input.GetKeyDown (KeyCode.RightArrow)) {
-            this.transform.Translate (5, 0, 0);
+            if (this.transform.position.x < 60) {
+                this.transform.Translate (10, 0, 0);
+
+            }
             //transform.Translate (Vector3.left * -1 * Time.deltaTime);
         }
         if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-            this.transform.Translate (-5, 0, 0);
+            if (this.transform.position.x > 0) {
+                this.transform.Translate (-10, 0, 0);
+
+            }
             //transform.Translate (Vector3.left * 1 * Time.deltaTime);
         }
     }
